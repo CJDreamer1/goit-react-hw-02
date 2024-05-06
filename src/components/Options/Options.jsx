@@ -1,7 +1,8 @@
-export default function Options({ updateFeedback, totalFeedback, setValues }) {
-  const handleReset = () => {
-    setValues({ good: 0, neutral: 0, bad: 0 });
-  };
+export default function Options({
+  updateFeedback,
+  totalFeedback,
+  handleReset,
+}) {
   return (
     <>
       <button onClick={() => updateFeedback("good")}>Good</button>

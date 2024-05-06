@@ -21,9 +21,9 @@ export default function App() {
     setValues({ ...values, [type]: values[type] + 1 });
   };
 
-  //   const handleReset = () => {
-  //     setValues({ good: 0, neutral: 0, bad: 0 });
-  //   };
+  const handleReset = () => {
+    setValues({ good: 0, neutral: 0, bad: 0 });
+  };
 
   const positiveFeedback = Math.round((values.good / totalFeedback) * 100);
 
@@ -37,9 +37,8 @@ export default function App() {
       <Options
         updateFeedback={updateFeedback}
         totalFeedback={totalFeedback}
-        setValues={setValues}
+        handleReset={handleReset}
       />
-      {/* {totalFeedback > 0 && <button onClick={handleReset}>Reset</button>} */}
       {totalFeedback > 0 ? (
         <Feedback values={values} feedback={positiveFeedback} />
       ) : (
